@@ -1,0 +1,6 @@
+SYNTHETIC TEST DOCUMENT
+Title: Primary care copay
+Owner: PAYER | Type: CORPORATE_POLICY | Effective: 2026-01-01 | Supersedes: none
+
+The copay for a primary care visit is $20. This text is a made-up example for testing the demo.
+SYNTHETIC TEST DOCUMENT

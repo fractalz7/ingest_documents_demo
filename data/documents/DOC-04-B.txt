@@ -1,0 +1,6 @@
+SYNTHETIC TEST DOCUMENT
+Title: Callback window
+Owner: PAYER | Type: SOP | Effective: 2026-01-01 | Supersedes: none
+
+Callbacks are returned within 48 hours. The rule below applies to Texas. Questions about this rule go to the policy owner named above.
+SYNTHETIC TEST DOCUMENT

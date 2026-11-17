@@ -1,0 +1,6 @@
+SYNTHETIC TEST DOCUMENT
+Title: Specialist referral rule
+Owner: PAYER | Type: CONTRACT_EOC | Effective: 2026-01-01 | Supersedes: none
+
+A referral is not required to see a specialist. The rule below applies to Plan NW-Gold, Florida. This text is a made-up example for testing the demo.
+SYNTHETIC TEST DOCUMENT

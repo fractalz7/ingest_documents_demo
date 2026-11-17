@@ -1,0 +1,4 @@
+pydantic>=2
+pytest
+# Optional, only for pcd/backends/crewai_backend.py (UNTESTED):
+# crewai

@@ -1,0 +1,6 @@
+SYNTHETIC TEST DOCUMENT
+Title: Document request turnaround
+Owner: PAYER | Type: SOP | Effective: 2025-01-01 | Supersedes: none
+
+Document requests are completed within 10 days. Questions about this rule go to the policy owner named above.
+SYNTHETIC TEST DOCUMENT

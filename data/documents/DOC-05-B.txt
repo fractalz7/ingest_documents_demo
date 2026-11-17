@@ -1,0 +1,7 @@
+SYNTHETIC TEST DOCUMENT
+Title: Appeal filing deadline
+Owner: PAYER | Type: CONTRACT_EOC | Effective: 2026-01-01 | Supersedes: none
+Applies to: Plan NW-Gold
+
+An appeal must be filed within 65 days of the decision. Questions about this rule go to the policy owner named above.
+SYNTHETIC TEST DOCUMENT

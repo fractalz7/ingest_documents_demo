@@ -1,0 +1,7 @@
+SYNTHETIC TEST DOCUMENT
+Title: Primary care copay
+Owner: PAYER | Type: CONTRACT_EOC | Effective: 2026-01-01 | Supersedes: none
+Applies to: Plan NW-Silver
+
+The copay for a primary care visit is $10. Questions about this rule go to the policy owner named above.
+SYNTHETIC TEST DOCUMENT

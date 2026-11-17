@@ -1,0 +1,6 @@
+SYNTHETIC TEST DOCUMENT
+Title: Document request turnaround
+Owner: PAYER | Type: SOP | Effective: 2026-02-01 | Supersedes: DOC-07-A
+
+Turnaround for a document request is 5 days. This text is a made-up example for testing the demo.
+SYNTHETIC TEST DOCUMENT

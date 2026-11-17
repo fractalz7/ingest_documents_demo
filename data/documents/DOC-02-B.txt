@@ -1,0 +1,6 @@
+SYNTHETIC TEST DOCUMENT
+Title: Call summary retention
+Owner: PAYER | Type: SOP | Effective: 2025-09-01 | Supersedes: none
+
+Call summaries are kept for 30 days. Questions about this rule go to the policy owner named above.
+SYNTHETIC TEST DOCUMENT

@@ -1,0 +1,6 @@
+SYNTHETIC TEST DOCUMENT
+Title: Interpreter scheduling lead time
+Owner: PAYER | Type: CORPORATE_POLICY | Effective: 2026-01-01 | Supersedes: none
+
+Interpreter bookings require 24 hours of lead time. This text is a made-up example for testing the demo.
+SYNTHETIC TEST DOCUMENT

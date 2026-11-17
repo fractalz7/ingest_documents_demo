@@ -1,0 +1,6 @@
+SYNTHETIC TEST DOCUMENT
+Title: Specialist referral rule
+Owner: CARE_DELIVERY | Type: CLINIC_PROCEDURE | Effective: 2026-03-01 | Supersedes: none
+
+Members must get a referral before seeing a specialist. This section covers Florida, clinic setting. This text is a made-up example for testing the demo.
+SYNTHETIC TEST DOCUMENT

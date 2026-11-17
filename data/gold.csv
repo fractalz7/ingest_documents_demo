@@ -1,0 +1,11 @@
+case_id,split,category,claim_a,claim_b,true_label,risk,expected_route,scope_overlap,date_overlap,rule,final_status_a,final_status_b
+C01,dev,TRUE_CONTRADICTION high-risk,DOC-01-A:specialist_referral,DOC-01-B:specialist_referral,TRUE_CONTRADICTION,HIGH,HUMAN,True,True,R2_AUTHORITY,CERTIFIED,SCOPED
+C02,dev,TRUE_CONTRADICTION low-risk,DOC-02-A:call_summary_retention_days,DOC-02-B:call_summary_retention_days,TRUE_CONTRADICTION,LOW,AUTO,True,True,R2_AUTHORITY,CERTIFIED,WITHHELD
+C03,dev,TRUE_CONTRADICTION high-risk numeric,DOC-03-A:copay_primary_care,DOC-03-B:copay_primary_care,TRUE_CONTRADICTION,HIGH,HUMAN,True,True,R2_AUTHORITY,CERTIFIED,SCOPED
+C04,dev,SCOPE_DIFFERENCE state,DOC-04-A:callback_window_hours,DOC-04-B:callback_window_hours,SCOPE_DIFFERENCE,LOW,NONE,False,True,,CERTIFIED,CERTIFIED
+C05,dev,SCOPE_DIFFERENCE plan year,DOC-05-A:appeal_filing_deadline_days,DOC-05-B:appeal_filing_deadline_days,SCOPE_DIFFERENCE,HIGH,NONE,True,False,,CERTIFIED,CERTIFIED
+C06,dev,SCOPE_DIFFERENCE plan,DOC-06-A:copay_primary_care,DOC-06-B:copay_primary_care,SCOPE_DIFFERENCE,HIGH,NONE,False,True,,CERTIFIED,CERTIFIED
+C07,dev,OUTDATED_VERSION,DOC-07-A:document_request_turnaround_days,DOC-07-B:document_request_turnaround_days,OUTDATED_VERSION,LOW,AUTO,True,True,R1_SUPERSEDES,WITHHELD,CERTIFIED
+C08,dev,TRUE_CONTRADICTION cross-owner,DOC-08-A:interpreter_scheduling_lead_hours,DOC-08-B:interpreter_scheduling_lead_hours,TRUE_CONTRADICTION,LOW,HUMAN,True,True,R3_SCOPE,SCOPED,CERTIFIED
+C09,dev,AMBIGUITY_TIE,DOC-09-A:call_summary_retention_days,DOC-09-B:call_summary_retention_days,AMBIGUITY_TIE,LOW,HUMAN,True,True,,WITHHELD,WITHHELD
+C10,dev,NO_CONFLICT paraphrase,DOC-10-A:specialist_referral,DOC-10-B:specialist_referral,NO_CONFLICT,HIGH,NONE,True,True,,CERTIFIED,CERTIFIED

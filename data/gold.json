@@ -1,0 +1,857 @@
+[
+  {
+    "case_id": "C01",
+    "category": "TRUE_CONTRADICTION high-risk",
+    "doc_ids": [
+      "DOC-01-A",
+      "DOC-01-B"
+    ],
+    "gold": {
+      "claims": [
+        {
+          "authority": 4,
+          "claim_id": "DOC-01-A:specialist_referral",
+          "doc_id": "DOC-01-A",
+          "effective_end": null,
+          "effective_start": "2026-01-01",
+          "owner": "PAYER",
+          "scope": {
+            "plan": "NW-Gold",
+            "setting": "ALL",
+            "state": "FL"
+          },
+          "source_text": "Members may see specialists without a referral.",
+          "supersedes_doc_id": null,
+          "topic": "specialist_referral",
+          "value": "not_required"
+        },
+        {
+          "authority": 1,
+          "claim_id": "DOC-01-B:specialist_referral",
+          "doc_id": "DOC-01-B",
+          "effective_end": null,
+          "effective_start": "2026-03-01",
+          "owner": "CARE_DELIVERY",
+          "scope": {
+            "plan": "ALL",
+            "setting": "clinic",
+            "state": "FL"
+          },
+          "source_text": "Members must get a referral before seeing a specialist.",
+          "supersedes_doc_id": null,
+          "topic": "specialist_referral",
+          "value": "required"
+        }
+      ],
+      "final_status": {
+        "DOC-01-A:specialist_referral": "CERTIFIED",
+        "DOC-01-B:specialist_referral": "SCOPED"
+      },
+      "metadata": {
+        "DOC-01-A": {
+          "authority": 4,
+          "effective_end": null,
+          "effective_start": "2026-01-01",
+          "owner": "PAYER",
+          "supersedes_doc_id": null
+        },
+        "DOC-01-B": {
+          "authority": 1,
+          "effective_end": null,
+          "effective_start": "2026-03-01",
+          "owner": "CARE_DELIVERY",
+          "supersedes_doc_id": null
+        }
+      },
+      "pairs": [
+        {
+          "claim_a_id": "DOC-01-A:specialist_referral",
+          "claim_b_id": "DOC-01-B:specialist_referral",
+          "date_overlap": true,
+          "final_status": {
+            "DOC-01-A:specialist_referral": "CERTIFIED",
+            "DOC-01-B:specialist_referral": "SCOPED"
+          },
+          "label": "TRUE_CONTRADICTION",
+          "resolution": {
+            "loser_claim_id": "DOC-01-B:specialist_referral",
+            "loser_disposition": "SCOPED",
+            "rule_fired": "R2_AUTHORITY",
+            "winner_claim_id": "DOC-01-A:specialist_referral"
+          },
+          "risk": "HIGH",
+          "route": "HUMAN",
+          "scope_overlap": true
+        }
+      ]
+    },
+    "split": "dev"
+  },
+  {
+    "case_id": "C02",
+    "category": "TRUE_CONTRADICTION low-risk",
+    "doc_ids": [
+      "DOC-02-A",
+      "DOC-02-B"
+    ],
+    "gold": {
+      "claims": [
+        {
+          "authority": 3,
+          "claim_id": "DOC-02-A:call_summary_retention_days",
+          "doc_id": "DOC-02-A",
+          "effective_end": null,
+          "effective_start": "2025-07-01",
+          "owner": "PAYER",
+          "scope": {
+            "plan": "ALL",
+            "setting": "ALL",
+            "state": "ALL"
+          },
+          "source_text": "Call summaries are kept for 90 days.",
+          "supersedes_doc_id": null,
+          "topic": "call_summary_retention_days",
+          "value": "90"
+        },
+        {
+          "authority": 2,
+          "claim_id": "DOC-02-B:call_summary_retention_days",
+          "doc_id": "DOC-02-B",
+          "effective_end": null,
+          "effective_start": "2025-09-01",
+          "owner": "PAYER",
+          "scope": {
+            "plan": "ALL",
+            "setting": "ALL",
+            "state": "ALL"
+          },
+          "source_text": "Call summaries are kept for 30 days.",
+          "supersedes_doc_id": null,
+          "topic": "call_summary_retention_days",
+          "value": "30"
+        }
+      ],
+      "final_status": {
+        "DOC-02-A:call_summary_retention_days": "CERTIFIED",
+        "DOC-02-B:call_summary_retention_days": "WITHHELD"
+      },
+      "metadata": {
+        "DOC-02-A": {
+          "authority": 3,
+          "effective_end": null,
+          "effective_start": "2025-07-01",
+          "owner": "PAYER",
+          "supersedes_doc_id": null
+        },
+        "DOC-02-B": {
+          "authority": 2,
+          "effective_end": null,
+          "effective_start": "2025-09-01",
+          "owner": "PAYER",
+          "supersedes_doc_id": null
+        }
+      },
+      "pairs": [
+        {
+          "claim_a_id": "DOC-02-A:call_summary_retention_days",
+          "claim_b_id": "DOC-02-B:call_summary_retention_days",
+          "date_overlap": true,
+          "final_status": {
+            "DOC-02-A:call_summary_retention_days": "CERTIFIED",
+            "DOC-02-B:call_summary_retention_days": "WITHHELD"
+          },
+          "label": "TRUE_CONTRADICTION",
+          "resolution": {
+            "loser_claim_id": "DOC-02-B:call_summary_retention_days",
+            "loser_disposition": "WITHHELD",
+            "rule_fired": "R2_AUTHORITY",
+            "winner_claim_id": "DOC-02-A:call_summary_retention_days"
+          },
+          "risk": "LOW",
+          "route": "AUTO",
+          "scope_overlap": true
+        }
+      ]
+    },
+    "split": "dev"
+  },
+  {
+    "case_id": "C03",
+    "category": "TRUE_CONTRADICTION high-risk numeric",
+    "doc_ids": [
+      "DOC-03-A",
+      "DOC-03-B"
+    ],
+    "gold": {
+      "claims": [
+        {
+          "authority": 4,
+          "claim_id": "DOC-03-A:copay_primary_care",
+          "doc_id": "DOC-03-A",
+          "effective_end": null,
+          "effective_start": "2026-01-01",
+          "owner": "PAYER",
+          "scope": {
+            "plan": "NW-Silver",
+            "setting": "ALL",
+            "state": "ALL"
+          },
+          "source_text": "Members pay $10 per primary care visit.",
+          "supersedes_doc_id": null,
+          "topic": "copay_primary_care",
+          "value": "USD:10"
+        },
+        {
+          "authority": 3,
+          "claim_id": "DOC-03-B:copay_primary_care",
+          "doc_id": "DOC-03-B",
+          "effective_end": null,
+          "effective_start": "2026-01-01",
+          "owner": "PAYER",
+          "scope": {
+            "plan": "ALL",
+            "setting": "ALL",
+            "state": "ALL"
+          },
+          "source_text": "The copay for a primary care visit is $20.",
+          "supersedes_doc_id": null,
+          "topic": "copay_primary_care",
+          "value": "USD:20"
+        }
+      ],
+      "final_status": {
+        "DOC-03-A:copay_primary_care": "CERTIFIED",
+        "DOC-03-B:copay_primary_care": "SCOPED"
+      },
+      "metadata": {
+        "DOC-03-A": {
+          "authority": 4,
+          "effective_end": null,
+          "effective_start": "2026-01-01",
+          "owner": "PAYER",
+          "supersedes_doc_id": null
+        },
+        "DOC-03-B": {
+          "authority": 3,
+          "effective_end": null,
+          "effective_start": "2026-01-01",
+          "owner": "PAYER",
+          "supersedes_doc_id": null
+        }
+      },
+      "pairs": [
+        {
+          "claim_a_id": "DOC-03-A:copay_primary_care",
+          "claim_b_id": "DOC-03-B:copay_primary_care",
+          "date_overlap": true,
+          "final_status": {
+            "DOC-03-A:copay_primary_care": "CERTIFIED",
+            "DOC-03-B:copay_primary_care": "SCOPED"
+          },
+          "label": "TRUE_CONTRADICTION",
+          "resolution": {
+            "loser_claim_id": "DOC-03-B:copay_primary_care",
+            "loser_disposition": "SCOPED",
+            "rule_fired": "R2_AUTHORITY",
+            "winner_claim_id": "DOC-03-A:copay_primary_care"
+          },
+          "risk": "HIGH",
+          "route": "HUMAN",
+          "scope_overlap": true
+        }
+      ]
+    },
+    "split": "dev"
+  },
+  {
+    "case_id": "C04",
+    "category": "SCOPE_DIFFERENCE state",
+    "doc_ids": [
+      "DOC-04-A",
+      "DOC-04-B"
+    ],
+    "gold": {
+      "claims": [
+        {
+          "authority": 2,
+          "claim_id": "DOC-04-A:callback_window_hours",
+          "doc_id": "DOC-04-A",
+          "effective_end": null,
+          "effective_start": "2026-01-01",
+          "owner": "PAYER",
+          "scope": {
+            "plan": "ALL",
+            "setting": "ALL",
+            "state": "FL"
+          },
+          "source_text": "Callbacks are returned within 24 hours.",
+          "supersedes_doc_id": null,
+          "topic": "callback_window_hours",
+          "value": "24"
+        },
+        {
+          "authority": 2,
+          "claim_id": "DOC-04-B:callback_window_hours",
+          "doc_id": "DOC-04-B",
+          "effective_end": null,
+          "effective_start": "2026-01-01",
+          "owner": "PAYER",
+          "scope": {
+            "plan": "ALL",
+            "setting": "ALL",
+            "state": "TX"
+          },
+          "source_text": "Callbacks are returned within 48 hours.",
+          "supersedes_doc_id": null,
+          "topic": "callback_window_hours",
+          "value": "48"
+        }
+      ],
+      "final_status": {
+        "DOC-04-A:callback_window_hours": "CERTIFIED",
+        "DOC-04-B:callback_window_hours": "CERTIFIED"
+      },
+      "metadata": {
+        "DOC-04-A": {
+          "authority": 2,
+          "effective_end": null,
+          "effective_start": "2026-01-01",
+          "owner": "PAYER",
+          "supersedes_doc_id": null
+        },
+        "DOC-04-B": {
+          "authority": 2,
+          "effective_end": null,
+          "effective_start": "2026-01-01",
+          "owner": "PAYER",
+          "supersedes_doc_id": null
+        }
+      },
+      "pairs": [
+        {
+          "claim_a_id": "DOC-04-A:callback_window_hours",
+          "claim_b_id": "DOC-04-B:callback_window_hours",
+          "date_overlap": true,
+          "final_status": {
+            "DOC-04-A:callback_window_hours": "CERTIFIED",
+            "DOC-04-B:callback_window_hours": "CERTIFIED"
+          },
+          "label": "SCOPE_DIFFERENCE",
+          "resolution": null,
+          "risk": "LOW",
+          "route": "NONE",
+          "scope_overlap": false
+        }
+      ]
+    },
+    "split": "dev"
+  },
+  {
+    "case_id": "C05",
+    "category": "SCOPE_DIFFERENCE plan year",
+    "doc_ids": [
+      "DOC-05-A",
+      "DOC-05-B"
+    ],
+    "gold": {
+      "claims": [
+        {
+          "authority": 4,
+          "claim_id": "DOC-05-A:appeal_filing_deadline_days",
+          "doc_id": "DOC-05-A",
+          "effective_end": "2025-12-31",
+          "effective_start": "2025-01-01",
+          "owner": "PAYER",
+          "scope": {
+            "plan": "NW-Gold",
+            "setting": "ALL",
+            "state": "ALL"
+          },
+          "source_text": "Members have 60 days to file an appeal.",
+          "supersedes_doc_id": null,
+          "topic": "appeal_filing_deadline_days",
+          "value": "60"
+        },
+        {
+          "authority": 4,
+          "claim_id": "DOC-05-B:appeal_filing_deadline_days",
+          "doc_id": "DOC-05-B",
+          "effective_end": null,
+          "effective_start": "2026-01-01",
+          "owner": "PAYER",
+          "scope": {
+            "plan": "NW-Gold",
+            "setting": "ALL",
+            "state": "ALL"
+          },
+          "source_text": "An appeal must be filed within 65 days of the decision.",
+          "supersedes_doc_id": null,
+          "topic": "appeal_filing_deadline_days",
+          "value": "65"
+        }
+      ],
+      "final_status": {
+        "DOC-05-A:appeal_filing_deadline_days": "CERTIFIED",
+        "DOC-05-B:appeal_filing_deadline_days": "CERTIFIED"
+      },
+      "metadata": {
+        "DOC-05-A": {
+          "authority": 4,
+          "effective_end": "2025-12-31",
+          "effective_start": "2025-01-01",
+          "owner": "PAYER",
+          "supersedes_doc_id": null
+        },
+        "DOC-05-B": {
+          "authority": 4,
+          "effective_end": null,
+          "effective_start": "2026-01-01",
+          "owner": "PAYER",
+          "supersedes_doc_id": null
+        }
+      },
+      "pairs": [
+        {
+          "claim_a_id": "DOC-05-A:appeal_filing_deadline_days",
+          "claim_b_id": "DOC-05-B:appeal_filing_deadline_days",
+          "date_overlap": false,
+          "final_status": {
+            "DOC-05-A:appeal_filing_deadline_days": "CERTIFIED",
+            "DOC-05-B:appeal_filing_deadline_days": "CERTIFIED"
+          },
+          "label": "SCOPE_DIFFERENCE",
+          "resolution": null,
+          "risk": "HIGH",
+          "route": "NONE",
+          "scope_overlap": true
+        }
+      ]
+    },
+    "split": "dev"
+  },
+  {
+    "case_id": "C06",
+    "category": "SCOPE_DIFFERENCE plan",
+    "doc_ids": [
+      "DOC-06-A",
+      "DOC-06-B"
+    ],
+    "gold": {
+      "claims": [
+        {
+          "authority": 4,
+          "claim_id": "DOC-06-A:copay_primary_care",
+          "doc_id": "DOC-06-A",
+          "effective_end": null,
+          "effective_start": "2026-01-01",
+          "owner": "PAYER",
+          "scope": {
+            "plan": "NW-Gold",
+            "setting": "ALL",
+            "state": "ALL"
+          },
+          "source_text": "Members pay $0 per primary care visit.",
+          "supersedes_doc_id": null,
+          "topic": "copay_primary_care",
+          "value": "USD:0"
+        },
+        {
+          "authority": 4,
+          "claim_id": "DOC-06-B:copay_primary_care",
+          "doc_id": "DOC-06-B",
+          "effective_end": null,
+          "effective_start": "2026-01-01",
+          "owner": "PAYER",
+          "scope": {
+            "plan": "NW-Silver",
+            "setting": "ALL",
+            "state": "ALL"
+          },
+          "source_text": "The copay for a primary care visit is $10.",
+          "supersedes_doc_id": null,
+          "topic": "copay_primary_care",
+          "value": "USD:10"
+        }
+      ],
+      "final_status": {
+        "DOC-06-A:copay_primary_care": "CERTIFIED",
+        "DOC-06-B:copay_primary_care": "CERTIFIED"
+      },
+      "metadata": {
+        "DOC-06-A": {
+          "authority": 4,
+          "effective_end": null,
+          "effective_start": "2026-01-01",
+          "owner": "PAYER",
+          "supersedes_doc_id": null
+        },
+        "DOC-06-B": {
+          "authority": 4,
+          "effective_end": null,
+          "effective_start": "2026-01-01",
+          "owner": "PAYER",
+          "supersedes_doc_id": null
+        }
+      },
+      "pairs": [
+        {
+          "claim_a_id": "DOC-06-A:copay_primary_care",
+          "claim_b_id": "DOC-06-B:copay_primary_care",
+          "date_overlap": true,
+          "final_status": {
+            "DOC-06-A:copay_primary_care": "CERTIFIED",
+            "DOC-06-B:copay_primary_care": "CERTIFIED"
+          },
+          "label": "SCOPE_DIFFERENCE",
+          "resolution": null,
+          "risk": "HIGH",
+          "route": "NONE",
+          "scope_overlap": false
+        }
+      ]
+    },
+    "split": "dev"
+  },
+  {
+    "case_id": "C07",
+    "category": "OUTDATED_VERSION",
+    "doc_ids": [
+      "DOC-07-A",
+      "DOC-07-B"
+    ],
+    "gold": {
+      "claims": [
+        {
+          "authority": 2,
+          "claim_id": "DOC-07-A:document_request_turnaround_days",
+          "doc_id": "DOC-07-A",
+          "effective_end": null,
+          "effective_start": "2025-01-01",
+          "owner": "PAYER",
+          "scope": {
+            "plan": "ALL",
+            "setting": "ALL",
+            "state": "ALL"
+          },
+          "source_text": "Document requests are completed within 10 days.",
+          "supersedes_doc_id": null,
+          "topic": "document_request_turnaround_days",
+          "value": "10"
+        },
+        {
+          "authority": 2,
+          "claim_id": "DOC-07-B:document_request_turnaround_days",
+          "doc_id": "DOC-07-B",
+          "effective_end": null,
+          "effective_start": "2026-02-01",
+          "owner": "PAYER",
+          "scope": {
+            "plan": "ALL",
+            "setting": "ALL",
+            "state": "ALL"
+          },
+          "source_text": "Turnaround for a document request is 5 days.",
+          "supersedes_doc_id": "DOC-07-A",
+          "topic": "document_request_turnaround_days",
+          "value": "5"
+        }
+      ],
+      "final_status": {
+        "DOC-07-A:document_request_turnaround_days": "WITHHELD",
+        "DOC-07-B:document_request_turnaround_days": "CERTIFIED"
+      },
+      "metadata": {
+        "DOC-07-A": {
+          "authority": 2,
+          "effective_end": null,
+          "effective_start": "2025-01-01",
+          "owner": "PAYER",
+          "supersedes_doc_id": null
+        },
+        "DOC-07-B": {
+          "authority": 2,
+          "effective_end": null,
+          "effective_start": "2026-02-01",
+          "owner": "PAYER",
+          "supersedes_doc_id": "DOC-07-A"
+        }
+      },
+      "pairs": [
+        {
+          "claim_a_id": "DOC-07-A:document_request_turnaround_days",
+          "claim_b_id": "DOC-07-B:document_request_turnaround_days",
+          "date_overlap": true,
+          "final_status": {
+            "DOC-07-A:document_request_turnaround_days": "WITHHELD",
+            "DOC-07-B:document_request_turnaround_days": "CERTIFIED"
+          },
+          "label": "OUTDATED_VERSION",
+          "resolution": {
+            "loser_claim_id": "DOC-07-A:document_request_turnaround_days",
+            "loser_disposition": "WITHHELD",
+            "rule_fired": "R1_SUPERSEDES",
+            "winner_claim_id": "DOC-07-B:document_request_turnaround_days"
+          },
+          "risk": "LOW",
+          "route": "AUTO",
+          "scope_overlap": true
+        }
+      ]
+    },
+    "split": "dev"
+  },
+  {
+    "case_id": "C08",
+    "category": "TRUE_CONTRADICTION cross-owner",
+    "doc_ids": [
+      "DOC-08-A",
+      "DOC-08-B"
+    ],
+    "gold": {
+      "claims": [
+        {
+          "authority": 3,
+          "claim_id": "DOC-08-A:interpreter_scheduling_lead_hours",
+          "doc_id": "DOC-08-A",
+          "effective_end": null,
+          "effective_start": "2026-01-01",
+          "owner": "PAYER",
+          "scope": {
+            "plan": "ALL",
+            "setting": "ALL",
+            "state": "ALL"
+          },
+          "source_text": "Interpreter bookings require 24 hours of lead time.",
+          "supersedes_doc_id": null,
+          "topic": "interpreter_scheduling_lead_hours",
+          "value": "24"
+        },
+        {
+          "authority": 3,
+          "claim_id": "DOC-08-B:interpreter_scheduling_lead_hours",
+          "doc_id": "DOC-08-B",
+          "effective_end": null,
+          "effective_start": "2026-01-01",
+          "owner": "CARE_DELIVERY",
+          "scope": {
+            "plan": "NW-Gold",
+            "setting": "ALL",
+            "state": "ALL"
+          },
+          "source_text": "Interpreter bookings require 48 hours of lead time.",
+          "supersedes_doc_id": null,
+          "topic": "interpreter_scheduling_lead_hours",
+          "value": "48"
+        }
+      ],
+      "final_status": {
+        "DOC-08-A:interpreter_scheduling_lead_hours": "SCOPED",
+        "DOC-08-B:interpreter_scheduling_lead_hours": "CERTIFIED"
+      },
+      "metadata": {
+        "DOC-08-A": {
+          "authority": 3,
+          "effective_end": null,
+          "effective_start": "2026-01-01",
+          "owner": "PAYER",
+          "supersedes_doc_id": null
+        },
+        "DOC-08-B": {
+          "authority": 3,
+          "effective_end": null,
+          "effective_start": "2026-01-01",
+          "owner": "CARE_DELIVERY",
+          "supersedes_doc_id": null
+        }
+      },
+      "pairs": [
+        {
+          "claim_a_id": "DOC-08-A:interpreter_scheduling_lead_hours",
+          "claim_b_id": "DOC-08-B:interpreter_scheduling_lead_hours",
+          "date_overlap": true,
+          "final_status": {
+            "DOC-08-A:interpreter_scheduling_lead_hours": "SCOPED",
+            "DOC-08-B:interpreter_scheduling_lead_hours": "CERTIFIED"
+          },
+          "label": "TRUE_CONTRADICTION",
+          "resolution": {
+            "loser_claim_id": "DOC-08-A:interpreter_scheduling_lead_hours",
+            "loser_disposition": "SCOPED",
+            "rule_fired": "R3_SCOPE",
+            "winner_claim_id": "DOC-08-B:interpreter_scheduling_lead_hours"
+          },
+          "risk": "LOW",
+          "route": "HUMAN",
+          "scope_overlap": true
+        }
+      ]
+    },
+    "split": "dev"
+  },
+  {
+    "case_id": "C09",
+    "category": "AMBIGUITY_TIE",
+    "doc_ids": [
+      "DOC-09-A",
+      "DOC-09-B"
+    ],
+    "gold": {
+      "claims": [
+        {
+          "authority": 2,
+          "claim_id": "DOC-09-A:call_summary_retention_days",
+          "doc_id": "DOC-09-A",
+          "effective_end": null,
+          "effective_start": "2026-01-01",
+          "owner": "PAYER",
+          "scope": {
+            "plan": "ALL",
+            "setting": "ALL",
+            "state": "ALL"
+          },
+          "source_text": "Call summaries are kept for 30 days.",
+          "supersedes_doc_id": null,
+          "topic": "call_summary_retention_days",
+          "value": "30"
+        },
+        {
+          "authority": 2,
+          "claim_id": "DOC-09-B:call_summary_retention_days",
+          "doc_id": "DOC-09-B",
+          "effective_end": null,
+          "effective_start": "2026-01-01",
+          "owner": "PAYER",
+          "scope": {
+            "plan": "ALL",
+            "setting": "ALL",
+            "state": "ALL"
+          },
+          "source_text": "Call summaries are kept for 45 days.",
+          "supersedes_doc_id": null,
+          "topic": "call_summary_retention_days",
+          "value": "45"
+        }
+      ],
+      "final_status": {
+        "DOC-09-A:call_summary_retention_days": "WITHHELD",
+        "DOC-09-B:call_summary_retention_days": "WITHHELD"
+      },
+      "metadata": {
+        "DOC-09-A": {
+          "authority": 2,
+          "effective_end": null,
+          "effective_start": "2026-01-01",
+          "owner": "PAYER",
+          "supersedes_doc_id": null
+        },
+        "DOC-09-B": {
+          "authority": 2,
+          "effective_end": null,
+          "effective_start": "2026-01-01",
+          "owner": "PAYER",
+          "supersedes_doc_id": null
+        }
+      },
+      "pairs": [
+        {
+          "claim_a_id": "DOC-09-A:call_summary_retention_days",
+          "claim_b_id": "DOC-09-B:call_summary_retention_days",
+          "date_overlap": true,
+          "final_status": {
+            "DOC-09-A:call_summary_retention_days": "WITHHELD",
+            "DOC-09-B:call_summary_retention_days": "WITHHELD"
+          },
+          "label": "AMBIGUITY_TIE",
+          "resolution": null,
+          "risk": "LOW",
+          "route": "HUMAN",
+          "scope_overlap": true
+        }
+      ]
+    },
+    "split": "dev"
+  },
+  {
+    "case_id": "C10",
+    "category": "NO_CONFLICT paraphrase",
+    "doc_ids": [
+      "DOC-10-A",
+      "DOC-10-B"
+    ],
+    "gold": {
+      "claims": [
+        {
+          "authority": 4,
+          "claim_id": "DOC-10-A:specialist_referral",
+          "doc_id": "DOC-10-A",
+          "effective_end": null,
+          "effective_start": "2026-01-01",
+          "owner": "PAYER",
+          "scope": {
+            "plan": "NW-Gold",
+            "setting": "ALL",
+            "state": "FL"
+          },
+          "source_text": "A referral is not required to see a specialist.",
+          "supersedes_doc_id": null,
+          "topic": "specialist_referral",
+          "value": "not_required"
+        },
+        {
+          "authority": 3,
+          "claim_id": "DOC-10-B:specialist_referral",
+          "doc_id": "DOC-10-B",
+          "effective_end": null,
+          "effective_start": "2026-01-01",
+          "owner": "PAYER",
+          "scope": {
+            "plan": "ALL",
+            "setting": "ALL",
+            "state": "FL"
+          },
+          "source_text": "Members may see specialists without a referral.",
+          "supersedes_doc_id": null,
+          "topic": "specialist_referral",
+          "value": "not_required"
+        }
+      ],
+      "final_status": {
+        "DOC-10-A:specialist_referral": "CERTIFIED",
+        "DOC-10-B:specialist_referral": "CERTIFIED"
+      },
+      "metadata": {
+        "DOC-10-A": {
+          "authority": 4,
+          "effective_end": null,
+          "effective_start": "2026-01-01",
+          "owner": "PAYER",
+          "supersedes_doc_id": null
+        },
+        "DOC-10-B": {
+          "authority": 3,
+          "effective_end": null,
+          "effective_start": "2026-01-01",
+          "owner": "PAYER",
+          "supersedes_doc_id": null
+        }
+      },
+      "pairs": [
+        {
+          "claim_a_id": "DOC-10-A:specialist_referral",
+          "claim_b_id": "DOC-10-B:specialist_referral",
+          "date_overlap": true,
+          "final_status": {
+            "DOC-10-A:specialist_referral": "CERTIFIED",
+            "DOC-10-B:specialist_referral": "CERTIFIED"
+          },
+          "label": "NO_CONFLICT",
+          "resolution": null,
+          "risk": "HIGH",
+          "route": "NONE",
+          "scope_overlap": true
+        }
+      ]
+    },
+    "split": "dev"
+  }
+]

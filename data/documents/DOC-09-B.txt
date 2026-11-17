@@ -1,0 +1,6 @@
+SYNTHETIC TEST DOCUMENT
+Title: Call summary retention
+Owner: PAYER | Type: SOP | Effective: 2026-01-01 | Supersedes: none
+
+Call summaries are kept for 45 days. This text is a made-up example for testing the demo.
+SYNTHETIC TEST DOCUMENT

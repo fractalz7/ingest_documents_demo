@@ -1,0 +1,6 @@
+SYNTHETIC TEST DOCUMENT
+Title: Primary care copay
+Owner: PAYER | Type: CONTRACT_EOC | Effective: 2026-01-01 | Supersedes: none
+
+Members pay $0 per primary care visit. This section covers Plan NW-Gold. Questions about this rule go to the policy owner named above.
+SYNTHETIC TEST DOCUMENT

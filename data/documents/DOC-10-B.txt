@@ -1,0 +1,7 @@
+SYNTHETIC TEST DOCUMENT
+Title: Specialist referral rule
+Owner: PAYER | Type: CORPORATE_POLICY | Effective: 2026-01-01 | Supersedes: none
+Applies to: Florida
+
+Members may see specialists without a referral. Questions about this rule go to the policy owner named above.
+SYNTHETIC TEST DOCUMENT
